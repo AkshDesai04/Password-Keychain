@@ -1,16 +1,19 @@
 package com.company;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class SignUp {
 	public static void makeUser() {
-		String USER_NAME, USER_PASS, USER_PASS_C, USER_FOLDER_DIR;
+		String USER_NAME, USER_PASS, USER_PASS_C, USER_FOLDER_DIR, USER_FILE_DIR;
 
 		File USER_FOLDER, USER_FILE;
 
 		Scanner in = new Scanner(System.in);
+		BufferedWriter out;
 
 
 
@@ -27,8 +30,9 @@ public class SignUp {
 					+ USER_NAME;
 			System.out.println("USERFOLDER = " + USER_FOLDER_DIR);
 			USER_FOLDER = new File(USER_FOLDER_DIR);
-			if (!USER_FOLDER.exists())
+			if (!USER_FOLDER.exists()) {
 				break;
+			}
 			else {
 				System.out.println("User Already Exists");
 				System.out.println("Please choose a different name.\n\n\n");
@@ -53,16 +57,34 @@ public class SignUp {
 			System.out.println("Please try again.");
 		}
 
-		USER_FILE = new File(USER_FOLDER_DIR+ "\\" + "Pass.pk");
+		USER_FILE_DIR = USER_FOLDER_DIR+ "\\" + "Pass.pk";
+
+		USER_FILE = new File(USER_FILE_DIR);
 
 		System.out.println(USER_FILE);
 
 		try {
 			if(USER_FILE.createNewFile()) {
 				System.out.println("File Created.");
+
+				appendStrToFile(USER_FILE_DIR, "uname:" + USER_NAME);
+				appendStrToFile(USER_FILE_DIR, "pass:" + USER_PASS);
+
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+	}
+
+	public static void appendStrToFile(String fileName, String str) {
+		try {
+			BufferedWriter out = new BufferedWriter
+					(new FileWriter(fileName, true));
+			out.write(str);
+			out.close();
+		}
+		catch (IOException e) {
+			System.out.println("exception occoured" + e);
 		}
 	}
 }
