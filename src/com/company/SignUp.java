@@ -67,7 +67,7 @@ public class SignUp {
 			if(USER_FILE.createNewFile()) {
 				System.out.println("File Created.");
 
-				appendStrToFile(USER_FILE_DIR, "uname:" + USER_NAME);
+				appendStrToFile(USER_FILE_DIR, "user_name:" + USER_NAME);
 				appendStrToFile(USER_FILE_DIR, "pass:" + USER_PASS);
 
 			}
@@ -77,6 +77,7 @@ public class SignUp {
 	}
 
 	public static void appendStrToFile(String fileName, String str) {
+		str += "\n";
 		try {
 			BufferedWriter out = new BufferedWriter
 					(new FileWriter(fileName, true));
