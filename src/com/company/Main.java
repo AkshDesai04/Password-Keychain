@@ -29,7 +29,7 @@ public class Main {
 
 
 
-        if(f.exists()) {
+        if(!f.exists()) {
             System.out.println("Enter 1 if u r a new user.");
             System.out.println("Enter 2 if u r a current user.");
 
