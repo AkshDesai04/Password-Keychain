@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class SignUp {
 	public static void makeUser() {
-		String USER_NAME, USER_PASS, USER_PASS_C, USER_FOLDER_DIR, USER_FILE_DIR;
+		String USER_NAME, USER_PASS, USER_PASS_C, USER_FOLDER_DIR, USER_FILE_DIR, REG_FILE;
 
 		File USER_FOLDER, USER_FILE;
 
@@ -26,8 +26,10 @@ public class SignUp {
 							auth.module.
 							NTSystem().
 							getName() +
-					"\\Documents\\Password-Keychane\\"
-					+ USER_NAME;
+					"\\Documents\\Password-Keychain\\Users\\"
+					+ USER_NAME + "\\";
+
+
 			System.out.println("USERFOLDER = " + USER_FOLDER_DIR);
 			USER_FOLDER = new File(USER_FOLDER_DIR);
 			if (!USER_FOLDER.exists()) {
@@ -57,23 +59,32 @@ public class SignUp {
 			System.out.println("Please try again.");
 		}
 
-		USER_FILE_DIR = USER_FOLDER_DIR+ "\\" + "Pass.pk";
+		USER_FILE_DIR = USER_FOLDER_DIR + "\\" + "Pass.pk";
 
 		USER_FILE = new File(USER_FILE_DIR);
 
-		System.out.println(USER_FILE);
+		System.out.println("File:- " + USER_FILE);
 
 		try {
-			if(USER_FILE.createNewFile()) {
+//			if(USER_FILE.createNewFile())
+			USER_FILE.createNewFile();
+			if(true) {
 				System.out.println("File Created.");
 
 				appendStrToFile(USER_FILE_DIR, "user_name:" + USER_NAME);
 				appendStrToFile(USER_FILE_DIR, "pass:" + USER_PASS);
-
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		REG_FILE = "C:\\Users\\" +
+				new com.sun.security.
+						auth.module.
+						NTSystem().
+						getName() +
+				"\\Documents\\Password-Keychane\\Register\\Register.reg";
+		appendStrToFile(REG_FILE, "user_name: " + USER_NAME);
 	}
 
 	public static void appendStrToFile(String fileName, String str) {

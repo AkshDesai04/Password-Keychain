@@ -13,8 +13,8 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        SignUp su = new SignUp();
         Setup sp = new Setup();
+        SignUp su = new SignUp();
 
 
 
@@ -29,26 +29,29 @@ public class Main {
 
 
 
-        if(!f.exists()) {
+//        if(!f.exists()) {
             System.out.println("Enter 1 if u r a new user.");
             System.out.println("Enter 2 if u r a current user.");
 
             cv = in.nextInt();
 
             switch(cv) {
-                case 1: su.makeUser(); break;
+                case 1:
+                    sp.InitSetup();
+                    System.out.println("Out of SignUp");
+                    su.makeUser();
+                break;
                 default:
                     System.out.println("Please try again.");
                     main(args);
-                break;
+                    break;
             }
-        }
+//        }
 
-        else {
+//        else {
             System.out.println("Welcome to password keychain.");
             System.out.println("Lets get you started.");
-            sp.InitSetup();
-            su.makeUser();
-        }
+            System.out.println("Into SignUp");
+//        }
     }
 }
