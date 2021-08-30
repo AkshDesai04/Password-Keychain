@@ -1,4 +1,4 @@
-package com.company;
+package io.github.DevAkshDesai;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -96,7 +96,7 @@ public class SignUp {
 			out.close();
 		}
 		catch (IOException e) {
-			System.out.println("exception occoured" + e);
+			System.out.println("exception occurred" + e);
 		}
 	}
 }
