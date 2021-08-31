@@ -1,11 +1,11 @@
-package io.github.DevAkshDesai;
+package io.github.DevAkshDesai.Utility;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DataTime {
-
 	public static String getDataTime(boolean date, boolean time) {
+		String FORMATTED_OUTPUT;
 		SimpleDateFormat formatter = new SimpleDateFormat("dd|MM|yyyy HH:mm:ss");
 
 		if(date && time)
@@ -17,6 +17,7 @@ public class DataTime {
 
 		Date d = new Date();
 
-		return formatter.format(d);
+		FORMATTED_OUTPUT = formatter.format(d);
+		return FORMATTED_OUTPUT;
 	}
 }

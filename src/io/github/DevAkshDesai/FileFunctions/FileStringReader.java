@@ -1,4 +1,4 @@
-package io.github.DevAkshDesai;
+package io.github.DevAkshDesai.FileFunctions;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,6 @@
-package io.github.DevAkshDesai;
+package io.github.DevAkshDesai.SetupFunctions;
+
+import io.github.DevAkshDesai.Utility.DataTime;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -17,7 +19,7 @@ public class Setup {
 			LOG_FOLDER_DIR,
 			LOG_FILE_DIR;
 
-	Setup() {
+	public Setup() {
 		PROJECT_FOLDER_DIR = "C:\\Users\\" +
 				new com.sun.security.
 						auth.module.
@@ -37,18 +39,16 @@ public class Setup {
 
 
 	public static void InitSetup() throws IOException {
-		DataTime dt = new DataTime();
+		if(PROJECT_FOLDER.mkdir()) {System.out.println("Success");}
+		if(REGISTRY_FOLDER.mkdir()) {System.out.println("Success");}
+		if(REGISTRY_FILE.createNewFile()) {System.out.println("Success");}
+		if(LOG_FOLDER.mkdir()) {System.out.println("Success");}
+		if(LOG_FILE.createNewFile()) {System.out.println("Success");}
 
-		PROJECT_FOLDER.mkdir();
-		REGISTRY_FOLDER.mkdir();
-		REGISTRY_FILE.createNewFile();
-		LOG_FOLDER.mkdir();
-		LOG_FILE.createNewFile();
-
-		AppendFile(LOG_FILE, dt.getDataTime(true, true) + "\tLog File Created.");
+		AppendFile(LOG_FILE, DataTime.getDataTime(true, true) + "\tLog File Created.");
 	}
 
-	private static void AppendFile(File file, String data) throws IOException {
+	private static void AppendFile(File file, String data) {
 		try {
 			BufferedWriter BWAppender = new BufferedWriter(
 					new FileWriter(file, true));
