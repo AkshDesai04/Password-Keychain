@@ -1,0 +1,1 @@
+<String name="PROJECT_FOLDER_DIR>"C:\Users\"+$UserName$+"\Documents\Password-Keychain\"</String>
