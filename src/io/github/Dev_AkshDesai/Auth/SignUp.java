@@ -47,22 +47,20 @@ public class SignUp {
 			System.out.println("Confirm your new password.");
 			USER_PASS_C = in.nextLine();
 
-			if (USER_PASS.equals(USER_PASS_C)) {
+			if (USER_PASS.equals(USER_PASS_C))
 				break;
-			}
 
 			System.out.println("The passwords do not match.");
 			System.out.println("Please try again.");
 		}
 
-		USER_FILE_DIR = USER_FOLDER_DIR + "\\" + "Pass.pk";
+		USER_FILE_DIR = USER_FOLDER_DIR + "Pass.pk";
 
 		USER_FILE = new File(USER_FILE_DIR);
 
 		System.out.println("File:- " + USER_FILE);
 
 		try {
-//			if(USER_FILE.createNewFile())
 			if(USER_FILE.createNewFile()) {
 				System.out.println("File Created.");
 
