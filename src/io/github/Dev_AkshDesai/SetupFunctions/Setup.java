@@ -1,11 +1,11 @@
-package io.github.DevAkshDesai.SetupFunctions;
+package io.github.Dev_AkshDesai.SetupFunctions;
 
 import io.github.DevAkshDesai.Utility.DataTime;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+
+import static io.github.DevAkshDesai.FileFunctions.FileWriter.AppendFile;
 
 public class Setup {
 	static File PROJECT_FOLDER,
@@ -46,16 +46,5 @@ public class Setup {
 		if(LOG_FILE.createNewFile()) {System.out.println("Success");}
 
 		AppendFile(LOG_FILE, DataTime.getDataTime(true, true) + "\tLog File Created.");
-	}
-
-	private static void AppendFile(File file, String data) {
-		try {
-			BufferedWriter BWAppender = new BufferedWriter(
-					new FileWriter(file, true));
-			BWAppender.write(data);
-		}
-		catch (Exception e) {
-			System.out.println(e);
-		}
 	}
 }

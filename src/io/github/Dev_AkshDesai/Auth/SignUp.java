@@ -1,4 +1,4 @@
-package io.github.DevAkshDesai.Auth;
+package io.github.Dev_AkshDesai.Auth;
 
 import java.io.BufferedWriter;
 import java.io.File;

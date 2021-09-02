@@ -1,6 +1,0 @@
-<String name = "PROJECT_FOLDER_DIR">"C:\Users\" + %UserName% + "\Documents\Password-Keychain\"</String>
-<String name = "REGISTRY_FOLDER_DIR">$PROJECT_FOLDER_DIR$ + "Registry\"</String>
-<String name = "Log_FOLDER_DIR">$PROJECT_FOLDER_DIR$ + "Log\"</String>
-
-<String name = "REGISTRY_FILE_DIR">$REGISTRY_FOLDER_DIR$ + "Registry.txt"</String>
-<String name = "LOG_FILE_DIR">$LOG_FOLDER_DIR$ + "Log.txt"</String>
