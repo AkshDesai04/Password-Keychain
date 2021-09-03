@@ -5,7 +5,7 @@ import io.github.Dev_AkshDesai.Utility.DataTime;
 import java.io.File;
 import java.io.IOException;
 
-import static io.github.Dev_AkshDesai.FileFunctions.FileWriter.AppendFile;
+import static io.github.Dev_AkshDesai.FileFunctions.FileWriter.WriteStrToFile;
 
 public class Setup {
 	static File PROJECT_FOLDER,
@@ -50,6 +50,6 @@ public class Setup {
 		if(LOG_FILE.createNewFile()) {System.out.println("Success");}
 		if(REGISTRY_FILE.createNewFile()) {System.out.println("Success");}
 
-		AppendFile(LOG_FILE, DataTime.getDataTime(true, true) + "\tLog File Created.");
+		WriteStrToFile(LOG_FILE_DIR, DataTime.getDataTime(true, true) + "\tLog File Created.", false);
 	}
 }

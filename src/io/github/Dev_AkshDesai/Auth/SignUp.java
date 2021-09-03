@@ -6,15 +6,32 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class SignUp {
-	public static void makeUser() {
-		String USER_NAME, USER_PASS, USER_PASS_C, USER_FOLDER_DIR, USER_FILE_DIR, REG_FILE;
+import static io.github.Dev_AkshDesai.FileFunctions.FileWriter.WriteStrToFile;
 
-		File USER_FOLDER, USER_FILE;
+public class SignUp {
+
+	public static void makeUser() {
+		String USER_NAME, USER_PASS, USER_PASS_C, USER_FOLDER_DIR, USER_FILE_DIR, REG_FILE_DIR, REG_FOLDER_DIR;
+
+		File USER_FOLDER, USER_FILE, REG_FOLDER, REG_FILE;
 
 		Scanner in = new Scanner(System.in);
 
 
+
+		REG_FOLDER_DIR = "C:\\Users\\" +
+				new com.sun.security.
+						auth.module.
+						NTSystem().
+						getName() +
+				"\\Documents\\Password-Keychain\\Register\\";
+		REG_FILE_DIR = "C:\\Users\\" +
+				new com.sun.security.
+						auth.module.
+						NTSystem().
+						getName() +
+				"\\Documents\\Password-Keychain\\Register\\Register.reg";
+		REG_FOLDER = new File(REG_FOLDER_DIR);
 
 		System.out.println("Enter your name.");
 		USER_NAME = in.nextLine();
@@ -58,38 +75,24 @@ public class SignUp {
 
 		USER_FILE = new File(USER_FILE_DIR);
 
-		System.out.println("File:- " + USER_FILE);
+		System.out.println("User File:- " + USER_FILE);
+
+		REG_FOLDER = new File(REG_FOLDER_DIR);
+
+		USER_FOLDER.mkdir();
+		REG_FOLDER.mkdir();
 
 		try {
 			if(USER_FILE.createNewFile()) {
 				System.out.println("File Created.");
 
-				appendStrToFile(USER_FILE_DIR, "user_name:" + USER_NAME);
-				appendStrToFile(USER_FILE_DIR, "pass:" + USER_PASS);
+				WriteStrToFile(USER_FILE_DIR, "user_name:" + USER_NAME, true);
+				WriteStrToFile(USER_FILE_DIR, "pass:" + USER_PASS, true);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		REG_FILE = "C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
-				"\\Documents\\Password-Keychain\\Register\\Register.reg";
-		appendStrToFile(REG_FILE, "user_name: " + USER_NAME);
-	}
-
-	public static void appendStrToFile(String fileName, String str) {
-		str += "\n";
-		try {
-			BufferedWriter out = new BufferedWriter
-					(new FileWriter(fileName, true));
-			out.write(str);
-			out.close();
-		}
-		catch (IOException e) {
-			System.out.println("exception occurred" + e);
-		}
+		WriteStrToFile(REG_FILE_DIR, "user_name: " + USER_NAME, true);
 	}
 }
