@@ -1,11 +1,14 @@
 package io.github.Dev_AkshDesai.Auth;
 
+import io.github.Dev_AkshDesai.res.ReturnString;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 import static io.github.Dev_AkshDesai.FileFunctions.FileWriter.WriteStrToFile;
 
 public class SignUp {
@@ -19,32 +22,18 @@ public class SignUp {
 
 
 
-		REG_FOLDER_DIR = "C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
-				"\\Documents\\Password-Keychain\\Register\\";
-		REG_FILE_DIR = "C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
-				"\\Documents\\Password-Keychain\\Register\\Register.reg";
+		REG_FOLDER_DIR = Return("REG_FOLDER_DIR");
+		REG_FILE_DIR = Return("REG_FILE_DIR");
+
 		REG_FOLDER = new File(REG_FOLDER_DIR);
 
 		System.out.println("Enter your name.");
 		USER_NAME = in.nextLine();
 
 		while(true) {
-			USER_FOLDER_DIR = "C:\\Users\\" +
-					new com.sun.security.
-							auth.module.
-							NTSystem().
-							getName() +
-					"\\Documents\\Password-Keychain\\Users\\"
-					+ USER_NAME + "\\";
-
+			USER_FOLDER_DIR = Return("USER_FOLDER_DIR")
+					+ USER_NAME +
+					"\\";
 
 			System.out.println("User Folder = " + USER_FOLDER_DIR);
 			USER_FOLDER = new File(USER_FOLDER_DIR);
@@ -71,7 +60,9 @@ public class SignUp {
 			System.out.println("Please try again.");
 		}
 
-		USER_FILE_DIR = USER_FOLDER_DIR + "Pass.pk";
+		USER_FILE_DIR = USER_FOLDER_DIR +
+				USER_NAME + "\\" +
+				USER_NAME + ".txt";
 
 		USER_FILE = new File(USER_FILE_DIR);
 
