@@ -1,11 +1,11 @@
 package io.github.Dev_AkshDesai.SetupFunctions;
 
-import io.github.Dev_AkshDesai.Utility.DataTime;
-
 import java.io.File;
 import java.io.IOException;
 
+import io.github.Dev_AkshDesai.Utility.DataTime;
 import static io.github.Dev_AkshDesai.FileFunctions.FileWriter.WriteStrToFile;
+
 
 public class Setup {
 	static File PROJECT_FOLDER,

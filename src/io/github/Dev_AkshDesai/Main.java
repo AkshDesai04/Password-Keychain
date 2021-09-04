@@ -5,8 +5,8 @@ import io.github.Dev_AkshDesai.Auth.SignUp;
 import io.github.Dev_AkshDesai.SetupFunctions.Setup;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Scanner;
+import java.io.IOException;
 
 
 public class Main {
