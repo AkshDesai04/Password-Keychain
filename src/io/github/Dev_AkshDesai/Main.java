@@ -2,11 +2,14 @@ package io.github.Dev_AkshDesai;
 
 import io.github.Dev_AkshDesai.Auth.SignIn;
 import io.github.Dev_AkshDesai.Auth.SignUp;
+import io.github.Dev_AkshDesai.res.ReturnString;
 import io.github.Dev_AkshDesai.SetupFunctions.Setup;
 
 import java.io.File;
 import java.util.Scanner;
 import java.io.IOException;
+
+import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 
 
 public class Main {
@@ -17,12 +20,7 @@ public class Main {
 
         try (Scanner in = new Scanner(System.in)) {
 
-            PROJECT_FOLDER_DIR = "C:\\Users\\" +
-                    new com.sun.security.
-                            auth.module.
-                            NTSystem().
-                            getName() +
-                    "\\Documents\\Password-Keychain\\";
+            PROJECT_FOLDER_DIR = Return("PROJECT_FOLDER_DIR");
 
             PROJECT_FOLDER = new File(PROJECT_FOLDER_DIR);
 

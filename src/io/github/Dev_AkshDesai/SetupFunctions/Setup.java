@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import io.github.Dev_AkshDesai.Utility.DataTime;
 import static io.github.Dev_AkshDesai.FileFunctions.FileWriter.WriteStrToFile;
+import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 
 
 public class Setup {
@@ -22,18 +23,12 @@ public class Setup {
 			USERS_FOLDER_DIR;
 
 	public Setup() {
-		PROJECT_FOLDER_DIR = "C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
-				"\\Documents\\Password-Keychain\\";
-		REGISTRY_FOLDER_DIR = PROJECT_FOLDER_DIR +
-				"Register\\";
-		USERS_FOLDER_DIR = PROJECT_FOLDER_DIR + "Users\\";
-		REGISTRY_FILE_DIR = REGISTRY_FOLDER_DIR + "Registry.reg";
-		LOG_FOLDER_DIR = PROJECT_FOLDER_DIR + "Log\\";
-		LOG_FILE_DIR = LOG_FOLDER_DIR + "Log.log";
+		PROJECT_FOLDER_DIR = Return("PROJECT_FOLDER_DIR");
+		REGISTRY_FOLDER_DIR = Return("REGISTRY_FOLDER_DIR");
+		USERS_FOLDER_DIR = Return("USERS_FOLDER_DIR");
+		REGISTRY_FILE_DIR = Return("REGISTRY_FILE_DIR");
+		LOG_FOLDER_DIR = Return("LOG_FOLDER_DIR");
+		LOG_FILE_DIR = Return("LOG_FILE_DIR");
 
 		PROJECT_FOLDER = new File(PROJECT_FOLDER_DIR);
 		REGISTRY_FOLDER = new File(REGISTRY_FOLDER_DIR);

@@ -34,5 +34,5 @@ public class ReturnString {
 		return "";
 	}
 
-	public static boolean IsEqual(String test) {return TestString.equals(test);}
+	public static boolean IsEqual(String TestString) {return TestString.equals(TestString);}
 }
