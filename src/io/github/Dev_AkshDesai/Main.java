@@ -35,18 +35,17 @@ public class Main {
                 switch (CV) {
                     case 1:
                         SignIn.sign_in();
-                        break;
+                    break;
                     case 2:
                         Setup.InitSetup();
                         SignUp.makeUser();
-                        break;
+                    break;
                     default:
                         throw new IllegalStateException("Unexpected value: " + CV);
                 }
-            } else {
-                SignUp.makeUser();
             }
+            else
+                SignUp.makeUser();
         }
     }
 }
-
