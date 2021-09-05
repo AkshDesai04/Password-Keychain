@@ -30,20 +30,13 @@ public class SignUp {
 		System.out.println("Enter your name.");
 		USER_NAME = in.nextLine();
 
-		while(true) {
-			USER_FOLDER_DIR = Return("USER_FOLDER_DIR")
-					+ USER_NAME +
-					"\\";
+		USER_FOLDER_DIR = Return("USER_FOLDER_DIR")
+				+ USER_NAME + "\\";
 
-			System.out.println("User Folder = " + USER_FOLDER_DIR);
-			USER_FOLDER = new File(USER_FOLDER_DIR);
-			if (USER_FOLDER.exists()) {
-				System.out.println("User Already Exists");
-				System.out.println("Please choose a different name.\n\n\n");
-				makeUser();
-			}
-			break;
-		}
+		System.out.println("User Folder = " + USER_FOLDER_DIR);
+		USER_FOLDER = new File(USER_FOLDER_DIR);
+		USER_FOLDER.mkdir();
+
 		if(USER_FOLDER.mkdir()) {System.out.println("Success");}
 
 		while(true) {
