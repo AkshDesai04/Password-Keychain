@@ -16,7 +16,7 @@ public class SignUp {
 	public static void makeUser() {
 		String USER_NAME, USER_PASS, USER_PASS_C, USER_FOLDER_DIR, USER_FILE_DIR, REG_FILE_DIR, REG_FOLDER_DIR;
 
-		File USER_FOLDER, USER_FILE, REG_FOLDER, REG_FILE;
+		File USER_FOLDER, USER_FILE, REG_FOLDER;
 
 		Scanner in = new Scanner(System.in);
 
@@ -24,8 +24,6 @@ public class SignUp {
 
 		REG_FOLDER_DIR = Return("REG_FOLDER_DIR");
 		REG_FILE_DIR = Return("REG_FILE_DIR");
-
-		REG_FOLDER = new File(REG_FOLDER_DIR);
 
 		System.out.println("Enter your name.");
 		USER_NAME = in.nextLine();
@@ -35,9 +33,11 @@ public class SignUp {
 
 		System.out.println("User Folder = " + USER_FOLDER_DIR);
 		USER_FOLDER = new File(USER_FOLDER_DIR);
-		USER_FOLDER.mkdir();
+		if(USER_FOLDER.getParentFile().mkdirs()) {
+			System.out.println("User folder made.");
+		}
 
-		if(USER_FOLDER.mkdir()) {System.out.println("Success");}
+		if(USER_FOLDER.getParentFile().mkdirs()) {System.out.println("Success");}
 
 		while(true) {
 			System.out.println("Enter your new password.");
@@ -63,8 +63,12 @@ public class SignUp {
 
 		REG_FOLDER = new File(REG_FOLDER_DIR);
 
-		USER_FOLDER.mkdir();
-		REG_FOLDER.mkdir();
+		if(USER_FOLDER.getParentFile().mkdirs()) {
+			System.out.println();
+		}
+		if(REG_FOLDER.getParentFile().mkdirs()) {
+			System.out.println("REG Folder made.");
+		}
 
 		try {
 			if(USER_FILE.createNewFile()) {
@@ -72,9 +76,11 @@ public class SignUp {
 
 				WriteStrToFile(USER_FILE_DIR, "user_name:" + USER_NAME, true);
 				WriteStrToFile(USER_FILE_DIR, "pass:" + USER_PASS, true);
-			}
+			}g
 		} catch (IOException e) {
+			System.out.println("Out");
 			e.printStackTrace();
+			System.out.println("Out");
 		}
 
 		WriteStrToFile(REG_FILE_DIR, "user_name: " + USER_NAME, true);
