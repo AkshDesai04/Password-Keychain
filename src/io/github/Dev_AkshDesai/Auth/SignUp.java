@@ -76,7 +76,7 @@ public class SignUp {
 
 				WriteStrToFile(USER_FILE_DIR, "user_name:" + USER_NAME, true);
 				WriteStrToFile(USER_FILE_DIR, "pass:" + USER_PASS, true);
-			}g
+			}
 		} catch (IOException e) {
 			System.out.println("Out");
 			e.printStackTrace();
