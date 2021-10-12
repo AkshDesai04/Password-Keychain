@@ -6,12 +6,13 @@ public class ReturnString {
 	public static String Return (String input) {
 
 		String PROJECT_FOLDER_DIR,
-				REGISTRY_FOLDER_DIR,
-				REGISTRY_FILE_DIR,
-				LOG_FOLDER_DIR,
-				LOG_FILE_DIR,
-				USER_FOLDER_DIR,
-				USER_FILE_DIR;
+				PROJECT_FILE_DIR;
+//				REGISTRY_FOLDER_DIR,
+//				REGISTRY_FILE_DIR,
+//				LOG_FOLDER_DIR,
+//				LOG_FILE_DIR,
+//				USER_FOLDER_DIR,
+//				USER_FILE_DIR;
 		TestString = input;
 
 		PROJECT_FOLDER_DIR = "C:\\Users\\" +
@@ -20,18 +21,10 @@ public class ReturnString {
 						NTSystem().
 						getName() +
 				"\\Documents\\Password-Keychain\\";
-		REGISTRY_FOLDER_DIR = PROJECT_FOLDER_DIR + "Registry\\";
-		REGISTRY_FILE_DIR = REGISTRY_FOLDER_DIR + "Registry.txt";
-		LOG_FOLDER_DIR = PROJECT_FOLDER_DIR + "Log\\";
-		LOG_FILE_DIR = LOG_FOLDER_DIR + "Log.txt";
-		USER_FOLDER_DIR = PROJECT_FOLDER_DIR + "Users\\";
+		PROJECT_FILE_DIR = PROJECT_FOLDER_DIR + "ProjectFile.pass";
 
 		if(IsEqual("Project Folder"))   return PROJECT_FOLDER_DIR;
-		if(IsEqual("Registry Folder"))  return REGISTRY_FOLDER_DIR;
-		if(IsEqual("Registry File"))    return REGISTRY_FILE_DIR;
-		if(IsEqual("Log Folder"))       return LOG_FOLDER_DIR;
-		if(IsEqual("Log File"))         return LOG_FILE_DIR;
-		if(IsEqual("User Folder"))      return USER_FOLDER_DIR;
+		if(IsEqual("Project File"))   return PROJECT_FILE_DIR;
 
 		return "";
 	}
