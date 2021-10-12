@@ -2,7 +2,7 @@ package io.github.Dev_AkshDesai.PaswordStuff;
 
 import java.util.Random;
 
-public class GeneraterGenerator {
+public class Generator {
 	public static String RandomString(
 							  int n,
 	                          boolean HighAlphaBOOL,
