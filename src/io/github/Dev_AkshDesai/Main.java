@@ -25,22 +25,26 @@ public class Main {
             PROJECT_FOLDER = new File(PROJECT_FOLDER_DIR);
 
             if (PROJECT_FOLDER.exists()) {
-                System.out.println("Enter 1 for Sign In");
-                System.out.println("Enter 2 for Sign Up");
 
-                CV = in.nextInt();
+                SignIn.sign_in();
+//                System.out.println("Enter 1 for Sign In");
+//                System.out.println("Enter 2 for Sign Up");
 
-                switch (CV) {
-                    case 1:
-                        SignIn.sign_in();
-                    break;
-                    case 2:
-                        Setup.InitSetup();
-                        SignUp.makeUser();
-                    break;
-                    default:
-                        throw new IllegalStateException("Unexpected value: " + CV);
-                }
+//                CV = in.nextInt();
+//
+//                switch (CV) {
+//                    case 1:
+//                        SignIn.sign_in();
+//                    break;
+//                    case 2:
+//                        Setup.InitSetup();
+//                        SignUp.makeUser();
+//                    break;
+//                    default:
+//                        throw new IllegalStateException("Unexpected value: " + CV);
+//                }
+
+
             }
             else
                 SignUp.makeUser();
