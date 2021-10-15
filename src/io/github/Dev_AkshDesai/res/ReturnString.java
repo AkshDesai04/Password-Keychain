@@ -24,6 +24,7 @@ public class ReturnString {
 		PROJECT_FILE_DIR = PROJECT_FOLDER_DIR + "ProjectFile.pass";
 
 		if(IsEqual("Project Folder"))   return PROJECT_FOLDER_DIR;
+		if(IsEqual("User Folder"))   return PROJECT_FOLDER_DIR;
 		if(IsEqual("Project File"))   return PROJECT_FILE_DIR;
 
 		return "";

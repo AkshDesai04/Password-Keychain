@@ -28,7 +28,7 @@ public class SignUp {
 		System.out.println("Enter your name.");
 		USER_NAME = in.nextLine();
 
-		USER_FOLDER_DIR = Return("USER_FOLDER_DIR")
+		USER_FOLDER_DIR = Return("User Folder")
 				+ USER_NAME + "\\";
 
 		System.out.println("User Folder = " + USER_FOLDER_DIR);
@@ -54,8 +54,9 @@ public class SignUp {
 		}
 
 		USER_FILE_DIR = USER_FOLDER_DIR +
-				USER_NAME + "\\" +
 				USER_NAME + ".txt";
+
+		System.out.println("User File Dir :" + USER_FILE_DIR);
 
 		USER_FILE = new File(USER_FILE_DIR);
 
@@ -71,12 +72,11 @@ public class SignUp {
 		}
 
 		try {
-			if(USER_FILE.createNewFile()) {
-				System.out.println("File Created.");
+			USER_FILE.createNewFile();
+			System.out.println("File Created.");
 
 				WriteStrToFile(USER_FILE_DIR, "user_name:" + USER_NAME, true);
 				WriteStrToFile(USER_FILE_DIR, "pass:" + USER_PASS, true);
-			}
 		} catch (IOException e) {
 			System.out.println("Out");
 			e.printStackTrace();
