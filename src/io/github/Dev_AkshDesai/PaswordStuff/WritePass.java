@@ -7,7 +7,7 @@ import static io.github.Dev_AkshDesai.Utility.DataTime.getDataTime;
 import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 
 public class WritePass {
-	void AddPassWord() {
+	public static void AddPassWord() {
 		String U_NAME, S_NAME, PASS, C_PASS;
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter the user name for the new password.");
@@ -31,7 +31,7 @@ public class WritePass {
 		String DATA = "---DATA---\n" +
 				getDataTime(true, true) + "\n" +
 				"U_NAME:" + U_NAME + "\n" +
-				"S_NAMW:" + S_NAME + "\n" +
+				"S_NAME:" + S_NAME + "\n" +
 				"PASSWORD:" + PASS + "\n" +
 				"---DATA---" + "\n\n";
 
