@@ -15,20 +15,25 @@ public class ReturnString {
 //				USER_FILE_DIR;
 		TestString = input;
 
-//		PROJECT_FOLDER_DIR = "C:\\Users\\"
-//				new com.sun.security.
-//						auth.module.
-//						NTSystem().
-//						getName() +
-//				"\\Documents\\Password-Keychain\\";
+		PROJECT_FOLDER_DIR = "C:\\Users\\" +
+				new com.sun.security.
+						auth.module.
+						NTSystem().
+						getName() +
+				"\\Documents\\Password-Keychain\\";
 
-				PROJECT_FOLDER_DIR = "D:\\AkshTestPass\\";
+//				PROJECT_FOLDER_DIR = "D:\\AkshTestPass\\";
 
 		PROJECT_FILE_DIR = PROJECT_FOLDER_DIR + "ProjectFile.pass";
 
+		System.out.println("HI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\n");
+		System.out.println("Debugging: file dir = " + PROJECT_FILE_DIR);
+		System.out.println("HI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\n");
+
+
 		if(IsEqual("Project Folder"))   return PROJECT_FOLDER_DIR;
 		if(IsEqual("User Folder"))   return PROJECT_FOLDER_DIR;
-		if(IsEqual("Project File"))   return PROJECT_FILE_DIR;
+		if(IsEqual("Project File")){System.out.println("returning this: " + PROJECT_FILE_DIR);return PROJECT_FILE_DIR;}
 
 		return "";
 	}
