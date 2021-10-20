@@ -88,6 +88,8 @@ public class SignUp {
 							+ "ProjectFile.pass"
 					, "user_name:" + USER_NAME, true);
 
+			System.out.println("Error?");
+
 			WriteStrToFile("C:\\Users\\" +
 							new com.sun.security.
 									auth.module.
@@ -95,7 +97,9 @@ public class SignUp {
 									getName() +
 							"\\Documents\\Password-Keychain\\"
 							+ "ProjectFile.pass"
-					, "user_name:" + USER_PASS, true);
+					, "user_pass:" + USER_PASS, true);
+			System.out.println("Error?");
+
 //			WriteStrToFile(USER_FILE_DIR, "pass:" + USER_PASS, true);
 		} catch (IOException e) {
 			System.out.println("Out");
@@ -103,7 +107,9 @@ public class SignUp {
 			System.out.println("Out");
 		}
 
-		WriteStrToFile(REG_FILE_DIR, "user_name: " + USER_NAME, true);
+//		WriteStrToFile(REG_FILE_DIR, "user_name: " + USER_NAME, true);
+		System.out.println("Error?");
+
 	}
 //}
 

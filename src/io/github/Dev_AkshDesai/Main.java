@@ -6,11 +6,29 @@ import java.io.File;
 import java.util.Scanner;
 import java.io.IOException;
 
+import static io.github.Dev_AkshDesai.FileFunctions.FileWriter.WriteStrToFile;
 import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 
 
 public class Main {
     public static void main(String[] args) throws IOException {
+
+
+        //TEST
+        System.out.println("Doing");
+        WriteStrToFile("C:\\Users\\" +
+                        new com.sun.security.
+                                auth.module.
+                                NTSystem().
+                                getName() +
+                        "\\Documents\\Test.txt",
+                        "HI", true);
+        System.out.println("Done");
+        //TEST
+
+
+
+
         int CV;
         File PROJECT_FOLDER;
         String PROJECT_FOLDER_DIR;
