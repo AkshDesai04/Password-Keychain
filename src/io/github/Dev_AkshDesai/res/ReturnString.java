@@ -15,12 +15,15 @@ public class ReturnString {
 //				USER_FILE_DIR;
 		TestString = input;
 
-		PROJECT_FOLDER_DIR = "C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
-				"\\Documents\\Password-Keychain\\";
+//		PROJECT_FOLDER_DIR = "C:\\Users\\"
+//				new com.sun.security.
+//						auth.module.
+//						NTSystem().
+//						getName() +
+//				"\\Documents\\Password-Keychain\\";
+
+				PROJECT_FOLDER_DIR = "D:\\AkshTestPass\\";
+
 		PROJECT_FILE_DIR = PROJECT_FOLDER_DIR + "ProjectFile.pass";
 
 		if(IsEqual("Project Folder"))   return PROJECT_FOLDER_DIR;
