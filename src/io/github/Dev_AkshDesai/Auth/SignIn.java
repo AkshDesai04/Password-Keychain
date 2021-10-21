@@ -15,7 +15,32 @@ public class SignIn {
 
 		PASS = in.nextLine();
 
-		if(PASS.equals(ReadFileData("", 1)))
+		if(PASS.equals(ReadFileData("C:\\Users\\" +
+											new com.sun.security.
+											auth.module.
+											NTSystem().
+											getName() +
+											"\\Documents\\" +
+											"Password-Keychain\\"
+											+ "ProjectFile.pass", 1))) {
 			PassFunc();
+			System.out.println("Good Job Signin");
+			PassFunc();
+		}
+
+		else {
+			System.out.println("Nope");
+
+			System.out.println(ReadFileData("C:\\Users\\" +
+					new com.sun.security.
+							auth.module.
+							NTSystem().
+							getName() +
+					"\\Documents\\" +
+					"Password-Keychain\\"
+					+ "ProjectFile.pass", 1));
+
+		}
+
 	}
 }

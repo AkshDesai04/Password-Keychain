@@ -1,5 +1,6 @@
 package io.github.Dev_AkshDesai;
 
+import io.github.Dev_AkshDesai.Auth.SignIn;
 import io.github.Dev_AkshDesai.Auth.SignUp;
 
 import java.io.File;
@@ -39,7 +40,7 @@ public class Main {
 
             PROJECT_FOLDER = new File(PROJECT_FOLDER_DIR);
 
-//            if (PROJECT_FOLDER.exists()) {
+            if (PROJECT_FOLDER.exists()) {
 
 //                SignIn.sign_in();
 //                System.out.println("Enter 1 for Sign In");
@@ -49,7 +50,7 @@ public class Main {
 //
 //                switch (CV) {
 //                    case 1:
-//                        SignIn.sign_in();
+                        SignIn.sign_in();
 //                    break;
 //                    case 2:
 //                        Setup.InitSetup();
@@ -60,8 +61,8 @@ public class Main {
 //                }
 
 
-//            }
-//            else
+            }
+            else
             SignUp.InitSetup();
             SignUp.makeUser();
 //        }
