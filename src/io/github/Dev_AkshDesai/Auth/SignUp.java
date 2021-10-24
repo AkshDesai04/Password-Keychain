@@ -162,7 +162,9 @@ public class SignUp {
 
 
 		if(PROJECT_FOLDER.mkdir()) {System.out.println("Success");}
-		if(PROJECT_FILE.createNewFile()) {System.out.println("Success.");}
+		if(PROJECT_FILE.createNewFile()) {System.out.println("Success pfile.");}
+		else
+			System.out.println("OOPS NOT SUCCESSFULL FILE MAKING.");
 //		if(REGISTRY_FOLDER.mkdir()) {System.out.println("Success");}
 //		if(USERS_FOLDER.mkdir()) {System.out.println("Success");}
 //		if(LOG_FOLDER.mkdir()) {System.out.println("Success");}

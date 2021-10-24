@@ -1,13 +1,14 @@
 package io.github.Dev_AkshDesai.PaswordStuff;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 import static io.github.Dev_AkshDesai.PaswordStuff.ReadPass.ReadPassword;
 import static io.github.Dev_AkshDesai.PaswordStuff.WritePass.AddPassWord;
 
 public class PasswordOperations {
-	public static void PassFunc() throws FileNotFoundException {
+	public static void PassFunc() throws IOException {
 		System.out.println("Enter 1 for new password");
 		System.out.println("Enter 2 for viewing password");
 		System.out.println("Enter 3 for editing password");

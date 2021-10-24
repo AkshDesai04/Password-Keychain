@@ -1,5 +1,6 @@
 package io.github.Dev_AkshDesai.PaswordStuff;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import static io.github.Dev_AkshDesai.FileFunctions.FileWriter.WriteStrToFile;
@@ -7,7 +8,7 @@ import static io.github.Dev_AkshDesai.Utility.DataTime.getDataTime;
 import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 
 public class WritePass {
-	public static void AddPassWord() {
+	public static void AddPassWord() throws IOException {
 		String U_NAME, S_NAME, PASS, C_PASS;
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter the user name for the new password.");

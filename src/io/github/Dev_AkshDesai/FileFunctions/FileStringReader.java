@@ -1,6 +1,7 @@
 package io.github.Dev_AkshDesai.FileFunctions;
 
 import javax.sound.sampled.Line;
+import javax.xml.bind.SchemaOutputResolver;
 import java.io.*;
 import java.util.Scanner;
 
@@ -17,6 +18,8 @@ public class FileStringReader {
 	}
 
 	public static String ReadFileData(String FileName, int LineNumber) throws FileNotFoundException {
+		System.out.println("OK U READING");
+
 		int c = 0;
 //		String data = ReadFileData(FileName);
 
@@ -56,9 +59,12 @@ public class FileStringReader {
 //					break;
 //			}
 
-			for(int i = LineNumber;i > 0;i++)
+			for(int i = LineNumber + 1;i >= 0;i--) {
 //				if(br.readLine())
 				data = br.readLine();
+				System.out.println("I have this " + data);
+				System.out.println("OK U LOOPING line 64 FileStringReader");
+			}
 				//TODO: Get this sorted now😅
 
 		} catch (IOException e) {

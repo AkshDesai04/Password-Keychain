@@ -35,7 +35,7 @@ public class ReturnString {
 		if(IsEqual("User Folder"))   return PROJECT_FOLDER_DIR;
 		if(IsEqual("Project File")){System.out.println("returning this: " + PROJECT_FILE_DIR);return PROJECT_FILE_DIR;}
 
-		return "";
+		return "lkfhkchkd";
 	}
 
 	public static boolean IsEqual(String TestString) {return TestString.equals(TestString);}
