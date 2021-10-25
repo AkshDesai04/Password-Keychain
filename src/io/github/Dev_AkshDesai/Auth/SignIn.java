@@ -27,6 +27,17 @@ public class SignIn {
 				"Password-Keychain\\"
 				+ "ProjectFile.pass", 3));
 
+		System.out.println("\n\n\n\n\nAkshStart");
+		System.out.println("SubStringeddddddddddddddddd" + ReadFileData("C:\\Users\\" +
+				new com.sun.security.
+						auth.module.
+						NTSystem().
+						getName() +
+				"\\Documents\\" +
+				"Password-Keychain\\"
+				+ "ProjectFile.pass", 3).substring(10));
+		System.out.println("\n\n\n\n\nAkshEnd");
+
 		if(PASS.equals(ReadFileData("C:\\Users\\" +
 											new com.sun.security.
 											auth.module.
@@ -34,7 +45,7 @@ public class SignIn {
 											getName() +
 											"\\Documents\\" +
 											"Password-Keychain\\"
-											+ "ProjectFile.pass", 3))) {
+											+ "ProjectFile.pass", 3).substring(10))) {
 			System.out.println("OK U IF");
 
 			PassFunc();

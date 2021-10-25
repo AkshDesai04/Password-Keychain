@@ -59,7 +59,7 @@ public class FileStringReader {
 //					break;
 //			}
 
-			for(int i = LineNumber + 1;i >= 0;i--) {
+			for(int i = LineNumber;i > 0;i--) {
 //				if(br.readLine())
 				data = br.readLine();
 				System.out.println("I have this " + data);
