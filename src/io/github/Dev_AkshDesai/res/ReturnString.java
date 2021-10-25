@@ -5,6 +5,8 @@ public class ReturnString {
 
 	public static String Return (String input) {
 
+		System.out.println("Returning Strings.");
+
 		String PROJECT_FOLDER_DIR,
 				PROJECT_FILE_DIR;
 //				REGISTRY_FOLDER_DIR,
@@ -33,9 +35,9 @@ public class ReturnString {
 
 		if(IsEqual("Project Folder"))   return PROJECT_FOLDER_DIR;
 		if(IsEqual("User Folder"))   return PROJECT_FOLDER_DIR;
-		if(IsEqual("Project File")){System.out.println("returning this: " + PROJECT_FILE_DIR);return PROJECT_FILE_DIR;}
+		if(IsEqual("Project File")){System.out.println("\n\n\n\n\nRETURNSTRING\nreturning this: " + PROJECT_FILE_DIR);return PROJECT_FILE_DIR;}
 
-		return "lkfhkchkd";
+		return PROJECT_FILE_DIR;
 	}
 
 	public static boolean IsEqual(String TestString) {return TestString.equals(TestString);}

@@ -9,7 +9,7 @@ import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 
 public class WritePass {
 	public static void AddPassWord() throws IOException {
-		String U_NAME, S_NAME, PASS, C_PASS;
+		String U_NAME, S_NAME, PASS, C_PASS, PROJECT_FILE_DIR;
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter the user name for the new password.");
 		U_NAME = in.nextLine();
@@ -19,6 +19,18 @@ public class WritePass {
 		PASS = in.nextLine();
 		System.out.println("Confirm the new password.");
 		C_PASS = in.nextLine();
+
+
+
+		//TODO: Make this string to take data from ReturnStrings.java and not make it hardcoded.
+		PROJECT_FILE_DIR = "C:\\Users\\" +
+				new com.sun.security.
+						auth.module.
+						NTSystem().
+						getName() +
+				"\\Documents\\Password-Keychain\\" + "ProjectFile.pass";
+
+
 
 		while(!PASS.equals(C_PASS)) {
 			System.out.println("The passwords do not match.\nPlease try again.");
@@ -37,6 +49,7 @@ public class WritePass {
 				"---DATA---" + "\n\n";
 
 
-		WriteStrToFile(Return("Project File"), DATA, true);
+		//TODO: Make this function to take data from ReturnStrings.java for first perimeter and not make it hardcoded.
+		WriteStrToFile(PROJECT_FILE_DIR, DATA, true);
 	}
 }

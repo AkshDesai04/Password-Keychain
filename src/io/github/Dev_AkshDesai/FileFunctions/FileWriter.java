@@ -52,7 +52,7 @@ public class FileWriter {
 						System.out.println("Wrote\t" + Data + "\tto\t" + FileDir);
 					}
 					catch (Exception E) {
-						System.out.println(E);
+						System.out.println("FilwWritter.java     \t\t\t  \n\nLine 55" + E);
 					}
 
 				break;
