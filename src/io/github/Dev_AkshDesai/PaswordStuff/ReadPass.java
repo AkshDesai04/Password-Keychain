@@ -2,25 +2,65 @@ package io.github.Dev_AkshDesai.PaswordStuff;
 
 import io.github.Dev_AkshDesai.res.ReturnString;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.io.FileNotFoundException;
 
 import static io.github.Dev_AkshDesai.FileFunctions.FileStringReader.ReadFileData;
 import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 
 public class ReadPass {
-	public static String[] ReadPassword() throws FileNotFoundException {
-		String output[] = new String[3];
+	public static String ReadPassword(String U_NAME) throws FileNotFoundException {
+//		String output = "";
+//
+//		//TODO: Make this string to take data from ReturnStrings.java and not make it hardcoded.
+//		String data = ReadFileData(	"C:\\Users\\" +
+//						new com.sun.security.
+//								auth.module.
+//								NTSystem().
+//								getName() +
+//						"\\Documents\\Password-Keychain\\" + "ProjectFile.pass"), temp = "";
+//
+//		System.out.println("RFD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+//		System.out.println("data : \n" + data);
+//		System.out.println("RFD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+//
+//
+//		try {
+//			output = data.substring(data.indexOf("S_NAME:" + U_NAME) +
+//							("S_NAME:" + U_NAME).length(),
+//					data.indexOf("PASSWORD:" + "PASSWORD:".length(),
+//							data.indexOf("S_NAME:" + U_NAME)));
+//		}
+//		catch(Exception e) {
+//			System.out.println("Error As : " + e);
+//			output += "OOPS";
+//		}
+//
+//
+//		System.out.println("output");
+//		System.out.println(output);
+//		System.out.println("output");
+//
+//		return output;    //TEMP
 
-		String data = ReadFileData(Return("Project File")), temp = "";
 
-		for(int i = 0;i < data.length();i++) {
-			temp = data.substring(data.indexOf('\n'), data.indexOf('\n', data.indexOf('\n') + 1));
-			if(temp.substring(0, temp.indexOf(':')).equals("U_NAME")) {
-				output[0] = temp.substring(temp.indexOf(':'), temp.indexOf('\n'));
-				//TODO: ADD OTHER FIELDS IN THE OUTPUT ARRAY
-			}
-		}
 
-		return new String[]{"Aksh"};    //TEMP
+
+
+
+
+		String output = "";
+
+
+
+
+
+
+
+
+
+
+
+		return output; //TEMP
 	}
 }

@@ -9,6 +9,7 @@ import static io.github.Dev_AkshDesai.PaswordStuff.WritePass.AddPassWord;
 
 public class PasswordOperations {
 	public static void PassFunc() throws IOException {
+		String str;
 		System.out.println("Enter 1 for new password");
 		System.out.println("Enter 2 for viewing password");
 		System.out.println("Enter 3 for editing password");
@@ -17,9 +18,16 @@ public class PasswordOperations {
 
 		int cv = in.nextInt();
 
+		System.out.println("Switch in");
 		switch(cv) {
 			case 1:     AddPassWord();    break;
-			case 2:     ReadPassword();     break;
+			case 2:
+				System.out.println("Enter user name for the password");
+				str = in.nextLine();
+				str = in.nextLine();
+				ReadPassword(str);
+			break;
 		}
+		System.out.println("Switch out");
 	}
 }
