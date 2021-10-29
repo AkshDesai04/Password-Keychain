@@ -16,28 +16,6 @@ public class SignIn {
 
 		PASS = in.nextLine();
 
-		System.out.println("OK U IN");
-
-		System.out.println("SubStringed: " + ReadFileData("C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
-				"\\Documents\\" +
-				"Password-Keychain\\"
-				+ "ProjectFile.pass", 3));
-
-		System.out.println("\n\n\n\n\nAkshStart");
-		System.out.println("SubStringeddddddddddddddddd" + ReadFileData("C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
-				"\\Documents\\" +
-				"Password-Keychain\\"
-				+ "ProjectFile.pass", 3).substring(10));
-		System.out.println("\n\n\n\n\nAkshEnd");
-
 		if(PASS.equals(ReadFileData("C:\\Users\\" +
 											new com.sun.security.
 											auth.module.
@@ -46,31 +24,10 @@ public class SignIn {
 											"\\Documents\\" +
 											"Password-Keychain\\"
 											+ "ProjectFile.pass", 3).substring(10))) {
-			System.out.println("OK U IF");
 
-			PassFunc();
-			System.out.println("Good Job Signin");
 			PassFunc();
 		}
 
-		else {
-			System.out.println("OK U ELSE");
-			System.out.println("Nope");
-
-			System.out.println(ReadFileData("C:\\Users\\" +
-					new com.sun.security.
-							auth.module.
-							NTSystem().
-							getName() +
-					"\\Documents\\" +
-					"Password-Keychain\\"
-					+ "ProjectFile.pass", 1));
-
-			System.out.println("Wrong Password");
-			System.out.println("Please try again.");
-
-			sign_in();
-
-		}
+		else	sign_in();
 	}
 }

@@ -20,17 +20,12 @@ public class WritePass {
 		System.out.println("Confirm the new password.");
 		C_PASS = in.nextLine();
 
-
-
-		//TODO: Make this string to take data from ReturnStrings.java and not make it hardcoded.
 		PROJECT_FILE_DIR = "C:\\Users\\" +
 				new com.sun.security.
 						auth.module.
 						NTSystem().
 						getName() +
 				"\\Documents\\Password-Keychain\\" + "ProjectFile.pass";
-
-
 
 		while(!PASS.equals(C_PASS)) {
 			System.out.println("The passwords do not match.\nPlease try again.");
@@ -48,8 +43,6 @@ public class WritePass {
 				"PASSWORD:" + PASS + "\n" +
 				"---DATA---" + "\n\n";
 
-
-		//TODO: Make this function to take data from ReturnStrings.java for first perimeter and not make it hardcoded.
 		WriteStrToFile(PROJECT_FILE_DIR, DATA, true);
 	}
 }

@@ -14,9 +14,6 @@ import static io.github.Dev_AkshDesai.res.ReturnString.Return;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-
-        //TEST
-        System.out.println("Doing");
         WriteStrToFile("C:\\Users\\" +
                         new com.sun.security.
                                 auth.module.
@@ -24,11 +21,6 @@ public class Main {
                                 getName() +
                         "\\Documents\\Test.txt",
                         "HI", true);
-        System.out.println("Done");
-        //TEST
-
-
-
 
         int CV;
         File PROJECT_FOLDER;
@@ -40,32 +32,8 @@ public class Main {
 
             PROJECT_FOLDER = new File(PROJECT_FOLDER_DIR);
 
-            if (PROJECT_FOLDER.exists()) {
-
-//                SignIn.sign_in();
-//                System.out.println("Enter 1 for Sign In");
-//                System.out.println("Enter 2 for Sign Up");
-
-//                CV = in.nextInt();
-//
-//                switch (CV) {
-//                    case 1:
-                        SignIn.sign_in();
-//                    break;
-//                    case 2:
-//                        Setup.InitSetup();
-//                        SignUp.makeUser();
-//                    break;
-//                    default:
-//                        throw new IllegalStateException("Unexpected value: " + CV);
-//                }
-
-
-            }
-            else
-            SignUp.InitSetup();
-            SignUp.makeUser();
-//        }
+            if (PROJECT_FOLDER.exists())            SignIn.sign_in();
+            else                                    SignUp.InitSetup();
         }
     }
 }

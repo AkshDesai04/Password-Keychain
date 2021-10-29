@@ -22,7 +22,6 @@ public class Generator {
 					= (int) (HighAlpha.length()
 					* Math.random());
 
-			// add Character one by one in end of sb
 			sb.append(HighAlpha
 					.charAt(index));
 		}
