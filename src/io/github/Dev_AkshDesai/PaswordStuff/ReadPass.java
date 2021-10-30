@@ -1,6 +1,6 @@
 package io.github.Dev_AkshDesai.PaswordStuff;
 
-import io.github.Dev_AkshDesai.res.ReturnString;
+import io.github.Dev_AkshDesai.re.ReturnString;
 
 import javax.xml.bind.SchemaOutputResolver;
 import java.io.File;
