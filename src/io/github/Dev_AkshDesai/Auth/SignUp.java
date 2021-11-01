@@ -80,10 +80,7 @@ public class SignUp {
 //			WriteStrToFile(USER_FILE_DIR, "user_name:" + USER_NAME, true);
 //			WriteStrToFile(USER_FILE_DIR, "pass:" + USER_PASS, true);
 			WriteStrToFile("C:\\Users\\" +
-							new com.sun.security.
-									auth.module.
-									NTSystem().
-									getName() +
+							System.getProperty("user.name")+
 							"\\Documents\\Password-Keychain\\"
 							+ "ProjectFile.pass"
 					, "user_name:" + USER_NAME, true);
@@ -91,10 +88,7 @@ public class SignUp {
 			System.out.println("Error?");
 
 			WriteStrToFile("C:\\Users\\" +
-							new com.sun.security.
-									auth.module.
-									NTSystem().
-									getName() +
+							System.getProperty("user.name")+
 							"\\Documents\\Password-Keychain\\"
 							+ "ProjectFile.pass"
 					, "user_pass:" + USER_PASS, true);

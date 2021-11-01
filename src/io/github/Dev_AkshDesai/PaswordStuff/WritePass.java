@@ -24,10 +24,7 @@ public class WritePass {
 
 		//TODO: Make this string to take data from ReturnStrings.java and not make it hardcoded.
 		PROJECT_FILE_DIR = "C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
+				System.getProperty("user.name")+
 				"\\Documents\\Password-Keychain\\" + "ProjectFile.pass";
 
 

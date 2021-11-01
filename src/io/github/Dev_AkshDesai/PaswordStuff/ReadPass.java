@@ -2,10 +2,12 @@ package io.github.Dev_AkshDesai.PaswordStuff;
 
 import io.github.Dev_AkshDesai.res.ReturnString;
 
-import javax.xml.bind.SchemaOutputResolver;
+//import javax.xml.bind.SchemaOutputResolver;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+//import com.sun.security.auth.module;
 
 import static io.github.Dev_AkshDesai.FileFunctions.FileStringReader.ReadFileData;
 import static io.github.Dev_AkshDesai.res.ReturnString.Return;
@@ -50,10 +52,7 @@ public class ReadPass {
 
 
 		String FILE = "C:\\Users\\" +
-						new com.sun.security.
-								auth.module.
-								NTSystem().
-								getName() +
+						System.getProperty("user.name")	+
 						"\\Documents\\Password-Keychain\\" +
 						"ProjectFile.pass";
 		File file = new File(FILE);

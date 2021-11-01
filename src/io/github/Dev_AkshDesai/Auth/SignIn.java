@@ -19,30 +19,21 @@ public class SignIn {
 		System.out.println("OK U IN");
 
 		System.out.println("SubStringed: " + ReadFileData("C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
+				System.getProperty("user.name")+
 				"\\Documents\\" +
 				"Password-Keychain\\"
 				+ "ProjectFile.pass", 3));
 
 		System.out.println("\n\n\n\n\nAkshStart");
 		System.out.println("SubStringeddddddddddddddddd" + ReadFileData("C:\\Users\\" +
-				new com.sun.security.
-						auth.module.
-						NTSystem().
-						getName() +
+				System.getProperty("user.name")+
 				"\\Documents\\" +
 				"Password-Keychain\\"
 				+ "ProjectFile.pass", 3).substring(10));
 		System.out.println("\n\n\n\n\nAkshEnd");
 
 		if(PASS.equals(ReadFileData("C:\\Users\\" +
-											new com.sun.security.
-											auth.module.
-											NTSystem().
-											getName() +
+				System.getProperty("user.name")+
 											"\\Documents\\" +
 											"Password-Keychain\\"
 											+ "ProjectFile.pass", 3).substring(10))) {
@@ -58,10 +49,7 @@ public class SignIn {
 			System.out.println("Nope");
 
 			System.out.println(ReadFileData("C:\\Users\\" +
-					new com.sun.security.
-							auth.module.
-							NTSystem().
-							getName() +
+					System.getProperty("user.name")+
 					"\\Documents\\" +
 					"Password-Keychain\\"
 					+ "ProjectFile.pass", 1));

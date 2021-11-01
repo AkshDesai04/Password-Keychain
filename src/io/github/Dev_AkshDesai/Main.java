@@ -18,10 +18,7 @@ public class Main {
         //TEST
         System.out.println("Doing");
         WriteStrToFile("C:\\Users\\" +
-                        new com.sun.security.
-                                auth.module.
-                                NTSystem().
-                                getName() +
+                        System.getProperty("user.name") +
                         "\\Documents\\Test.txt",
                         "HI", true);
         System.out.println("Done");
