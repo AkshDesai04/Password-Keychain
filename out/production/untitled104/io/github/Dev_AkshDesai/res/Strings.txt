@@ -1,7 +1,0 @@
-PROJECT_FOLDER_DIR = "C:\Users\" + %UserName% + "\Documents\Password-Keychain\"
-
-REGISTRY_FOLDER_DIR = $PROJECT_FOLDER_DIR$ + "Registry\"
-Log_FOLDER_DIR = $PROJECT_FOLDER_DIR$ + "Log\"
-
-REGISTRY_FILE_DIR = $REGISTRY_FOLDER_DIR$ + "Registry.txt"
-LOG_FILE_DIR = $LOG_FOLDER_DIR$ + "Log.txt"
