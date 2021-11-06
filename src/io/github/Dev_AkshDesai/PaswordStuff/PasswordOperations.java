@@ -18,6 +18,7 @@ public class PasswordOperations {
 
 		int cv = in.nextInt();
 
+		System.out.println("Switch in");
 		switch(cv) {
 			case 1:     AddPassWord();    break;
 			case 2:
@@ -27,5 +28,6 @@ public class PasswordOperations {
 				ReadPassword(str);
 			break;
 		}
+		System.out.println("Switch out");
 	}
 }

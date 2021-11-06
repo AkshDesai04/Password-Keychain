@@ -16,41 +16,40 @@ public class SignIn {
 
 		PASS = in.nextLine();
 
-<<<<<<< HEAD
 		System.out.println("OK U IN");
 
 		System.out.println("SubStringed: " + ReadFileData("C:\\Users\\" +
-				System.getProperty("user.name")+
+				System.getProperty("user.name") +
 				"\\Documents\\" +
 				"Password-Keychain\\"
 				+ "ProjectFile.pass", 3));
 
 		System.out.println("\n\n\n\n\nAkshStart");
 		System.out.println("SubStringeddddddddddddddddd" + ReadFileData("C:\\Users\\" +
-				System.getProperty("user.name")+
+				System.getProperty("user.name") +
 				"\\Documents\\" +
 				"Password-Keychain\\"
 				+ "ProjectFile.pass", 3).substring(10));
 		System.out.println("\n\n\n\n\nAkshEnd");
 
-=======
->>>>>>> ProductionBuild
 		if(PASS.equals(ReadFileData("C:\\Users\\" +
-				System.getProperty("user.name")+
+											System.getProperty("user.name") +
 											"\\Documents\\" +
 											"Password-Keychain\\"
 											+ "ProjectFile.pass", 3).substring(10))) {
+			System.out.println("OK U IF");
 
+			PassFunc();
+			System.out.println("Good Job Signin");
 			PassFunc();
 		}
 
-<<<<<<< HEAD
 		else {
 			System.out.println("OK U ELSE");
 			System.out.println("Nope");
 
 			System.out.println(ReadFileData("C:\\Users\\" +
-					System.getProperty("user.name")+
+					System.getProperty("user.name") +
 					"\\Documents\\" +
 					"Password-Keychain\\"
 					+ "ProjectFile.pass", 1));
@@ -61,8 +60,5 @@ public class SignIn {
 			sign_in();
 
 		}
-=======
-		else	sign_in();
->>>>>>> ProductionBuild
 	}
 }
